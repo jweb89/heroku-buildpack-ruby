@@ -3,6 +3,7 @@
 # bootstraps the ruby needed and then executes `bin/support/ruby_compile`
 
 BUILD_DIR=$1/apps/rails
+$1=$1/apps/rails
 CACHE_DIR=$2
 ENV_DIR=$3
 BIN_DIR=$(cd "$(dirname "$0")" || exit; pwd) # absolute path
