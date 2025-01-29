@@ -13,7 +13,7 @@ require "language_pack/shell_helpers"
 
 begin
   LanguagePack::ShellHelpers.initialize_env(ARGV[2])
-  if pack = LanguagePack.detect(ARGV[0], ARGV[1] + "/apps/rails")
+  if pack = LanguagePack.detect(ARGV[0] + "/apps/rails", ARGV[1])
     pack.topic("Compiling #{pack.name}")
     pack.log("compile") do
       pack.compile
